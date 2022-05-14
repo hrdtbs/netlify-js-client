@@ -1,5 +1,6 @@
 import pWaitFor from 'p-wait-for'
 
+import deploy from './deploy/index.js'
 import { getMethods } from './methods/index.js'
 import { openApiSpec } from './open_api.js'
 import { getOperations } from './operations.js'
@@ -77,6 +78,13 @@ export class NetlifyAPI {
     // See https://open-api.netlify.com/#/default/exchangeTicket for shape
     this.accessToken = accessTokenResponse.access_token
     return accessTokenResponse.access_token
+  }
+
+  async deploy(siteId, buildDir, opts) {
+    if (!this.accessToken) throw new Error('Missing access token')
+    // the deploy function is swapped in the package.json browser field for different environments
+    // See https://github.com/defunctzombie/package-browser-field-spec
+    return await deploy(this, siteId, buildDir, opts)
   }
 }
 
