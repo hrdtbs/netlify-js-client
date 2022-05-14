@@ -1,7 +1,7 @@
 {
-  "name": "netlify",
-  "description": "Netlify Node.js API client",
-  "version": "11.0.1",
+  "name": "@hrdtbs/netlify",
+  "description": "Netlify Node.js API client with deploy method",
+  "version": "0.0.0",
   "type": "module",
   "files": [
     "src/**/*.js",
@@ -37,13 +37,10 @@
     "David Wells <david.wells@netlify.com> (https://davidwells.io/)",
     "Bret Comnes <bcomnes@gmail.com> (https://bret.io)"
   ],
-  "homepage": "https://github.com/netlify/js-client",
+  "homepage": "https://github.com/hrdtbs/netlify-js-client",
   "repository": {
     "type": "git",
-    "url": "https://github.com/netlify/js-client.git"
-  },
-  "bugs": {
-    "url": "https://github.com/netlify/js-client/issues"
+    "url": "https://github.com/hrdtbs/netlify-js-client.git"
   },
   "keywords": [
     "api client",
